@@ -7,10 +7,9 @@
   <meta name="description" content="Games by Deep Crypt Games." />
   <link rel="icon" href="/assets/img/favicon.png">
   <link rel="stylesheet" href="/assets/css/style.css">
-  <!-- Lock it down: all local assets, no scripts -->
-	<meta http-equiv="Content-Security-Policy"
-  	content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'sha256-nLXDiXfdUfj/pJpXvybLyfyIUf/cBQ+jwEuMMCPh5nI='; base-uri 'self'; form-action 'self'">
-
+  <!-- Secure: allow only local assets (self) -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; base-uri 'self'; form-action 'self'">
 </head>
 <body>
   <main class="wrap">
@@ -25,7 +24,7 @@
     <section class="block">
       <h2>+ + Highland Trip + +</h2>
       <p class="lede">
-        A first-person horror experience set in the Scottish Highlands in the Gaelic lanuage.
+        A first-person horror experience set in the Scottish Highlands in the Gaelic language.
       </p>
       <p class="links">
         <a class="btn" href="https://store.steampowered.com/app/XXXXXX" target="_blank" rel="noopener">Steam</a>
@@ -44,9 +43,7 @@
       <p class="copyright">© <span id="y"></span> Deep Crypt Games</p>
     </footer>
   </main>
-  <script>
-    // Only used to drop in the current year; remove if you prefer zero JS.
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+
+  <script src="/assets/js/main.js"></script>
 </body>
 </html>
