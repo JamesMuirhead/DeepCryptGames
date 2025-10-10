@@ -1,64 +1,84 @@
+/* ===== Custom header font (self-hosted) =====
+   Put your files at:
+   /assets/fonts/DeepCryptHeader.woff2
+   /assets/fonts/DeepCryptHeader.woff   (optional)
+*/
+@font-face {
+  font-family: 'DeepCryptHeader';
+  src: url('/assets/fonts/DeepCryptHeader.woff2') format('woff2'),
+       url('/assets/fonts/DeepCryptHeader.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===== Theme tokens ===== */
 :root {
   --bg: #0b0c0f;
-  --fg: #ffffff;
+  --fg: #ffffff;      /* body text */
   --muted: #a7acb8;
   --rule: #1a1d22;
-  --accent: #ff2a2a; /* red for headers */
+  --accent: #ff2a2a;  /* default header colour (red) */
   --btn-bg: #14171d;
   --btn-bg-hover: #1a1f27;
   --maxw: 780px;
   color-scheme: dark;
 }
 
+/* ===== Base ===== */
 * { box-sizing: border-box; }
 html, body {
   margin: 0;
   padding: 0;
   background: var(--bg);
   color: var(--fg);
-  font: 16px/1.6 monospace; /* monospace for body text */
+  font: 16px/1.6 monospace; /* monospace body */
 }
-
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-.wrap { max-width: var(--maxw); margin: 0 auto; padding: 2rem 1rem 4rem; }
-
-/* Header / Logo */
-.site-head {
-  text-align: center;
-  margin: 1rem 0 2rem;
+/* Content column */
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
 }
+
+/* ===== Header / Logo ===== */
+.site-head { text-align: center; margin: 1rem 0 2rem; }
 .site-head .logo {
   display: block;
   margin: 0 auto 1rem;
-  width: 100%; /* full column width */
+  width: 100%;        /* full column width */
   height: auto;
 }
-.byline { color: var(--muted); margin-top: .25rem; }
 
-/* Section headers */
-h2, h3, h4, h5, h6 {
-  font-family: "Times New Roman", serif; /* serif for headers */
+/* ===== Typography ===== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'DeepCryptHeader', serif; /* custom serif headers */
   font-weight: bold;
-  color: var(--accent); /* red */
+  color: var(--accent);                   /* red by default */
+  margin: 0 0 .25rem 0;
 }
+.byline { color: var(--muted); }
+
+/* Section copy */
+.block .lede { margin: 0 0 .75rem 0; }
 
 /* Divider */
-hr {
-  border: 0;
-  border-top: 1px solid var(--rule);
-  margin: 2rem 0;
+hr { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
+
+/* ===== Project media ===== */
+.project-img {
+  width: 100%;        /* force to column width */
+  max-width: 100%;    /* no overflow */
+  height: auto;       /* keep aspect ratio */
+  display: block;
+  margin: 1rem auto;
 }
 
-.block .lede { color: var(--fg); margin: 0 0 .75rem 0; }
-
-/* Links/Buttons */
-.links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .5rem;
-}
+/* ===== Buttons (kept for later) ===== */
+.links { display: flex; flex-wrap: wrap; gap: .5rem; }
 .btn {
   display: inline-block;
   padding: .55rem .9rem;
@@ -72,27 +92,18 @@ hr {
 .btn:hover { background: var(--btn-bg-hover); text-decoration: none; }
 .btn:active { transform: translateY(1px); }
 
-/* Ensure project images fit neatly inside the column */
-.project-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 1rem auto;
-}
-
-/* Footer */
-.site-foot {
-  margin-top: 2rem;
-  text-align: center;
-  color: var(--muted);
-}
+/* ===== Footer ===== */
+.site-foot { margin-top: 2rem; text-align: center; color: var(--muted); }
 .site-foot .social {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 .5rem 0;
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
+  list-style: none; padding: 0; margin: 0 0 .5rem 0;
+  display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
 }
 .site-foot .social a { color: var(--fg); }
+
+/* ===== Utility classes for colour overrides (CSP-safe) ===== */
+/* Apply these to any header to override the default red */
+.title-white { color: #ffffff; }
+.title-muted { color: var(--muted); }
+.title-gold  { color: #e6b800; }
+.title-blue  { color: #4bb3ff; }
+/* add more as needed */
