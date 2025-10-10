@@ -72,6 +72,14 @@ hr {
 .btn:hover { background: var(--btn-bg-hover); text-decoration: none; }
 .btn:active { transform: translateY(1px); }
 
+/* Ensure project images fit neatly inside the column */
+.project-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
+
 /* Footer */
 .site-foot {
   margin-top: 2rem;
