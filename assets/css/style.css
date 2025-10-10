@@ -56,7 +56,7 @@ a:hover { text-decoration: underline; }
 /* ===== Typography ===== */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'DeepCryptHeader', serif; /* custom serif headers */
-  font-weight: bold;
+  font-weight: normal;
   color: var(--accent);                   /* red by default */
   margin: 0 0 .25rem 0;
 }
