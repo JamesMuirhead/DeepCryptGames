@@ -83,7 +83,7 @@ h3 {
   margin: 0;                   /* remove its own spacing */
   font-size: 1.4rem;
   line-height: 1.2;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.1em;
 }
 
 .subtitle-text{
