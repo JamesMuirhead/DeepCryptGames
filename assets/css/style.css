@@ -48,17 +48,27 @@ a:hover { text-decoration: underline; }
 /* ===== Typography ===== */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Times New Roman", Times, serif;
-  font-weight: normal;
-  color: var(--accent); /* still red by default */
+  font-weight: 700;              /* bold */
+  color: var(--accent);
   margin: 0 0 .25rem 0;
+
+  display: inline-block;         /* required for transform */
+  transform: scaleX(0.79);       /* 79% horizontal scaling */
+  transform-origin: center;
 }
+
 .byline { color: var(--muted); }
 
 .subtitle {
   font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
   color: var(--muted);
   text-align: center;
   margin: 0 0 1rem 0;
+
+  display: inline-block;
+  transform: scaleX(0.79);
+  transform-origin: center;
 }
 
 /* Section copy */
