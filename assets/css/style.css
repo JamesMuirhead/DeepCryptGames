@@ -1,16 +1,8 @@
-/* ===== Custom header font (self-hosted) =====
+﻿/* ===== Custom header font (self-hosted) =====
    Put your files at:
    /assets/fonts/DeepCryptHeader.woff2
    /assets/fonts/DeepCryptHeader.woff   (optional)
 */
-@font-face {
-  font-family: 'DeepCryptHeader';
-  src: url('/assets/fonts/DeepCryptHeader.woff2') format('woff2'),
-       url('/assets/fonts/DeepCryptHeader.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 
 /* ===== Theme tokens ===== */
 :root {
@@ -55,12 +47,19 @@ a:hover { text-decoration: underline; }
 
 /* ===== Typography ===== */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'DeepCryptHeader', serif; /* custom serif headers */
+  font-family: "Times New Roman", Times, serif;
   font-weight: normal;
-  color: var(--accent);                   /* red by default */
+  color: var(--accent); /* still red by default */
   margin: 0 0 .25rem 0;
 }
 .byline { color: var(--muted); }
+
+.subtitle {
+  font-family: "Times New Roman", Times, serif;
+  color: var(--muted);
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
 
 /* Section copy */
 .block .lede { margin: 0 0 .75rem 0; }
