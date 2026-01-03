@@ -57,6 +57,21 @@ h1, h2, h3, h4, h5, h6 {
   transform-origin: left center;
 }
 
+h1 {
+  font-size: 2.75rem;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 2.1rem;
+  line-height: 1.15;
+}
+
+h3 {
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+
 .byline { color: var(--muted); }
 
 .subtitle {
@@ -69,6 +84,9 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   transform: scaleX(0.79);
   transform-origin: center;
+
+  font-size: 1.25rem;
+  line-height: 1.4;
 }
 
 /* Section copy */
