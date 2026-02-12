@@ -13,7 +13,7 @@
   --accent: #ff2a2a;  /* default header colour (red) */
   --btn-bg: #14171d;
   --btn-bg-hover: #1a1f27;
-  --maxw: 640px; /* was 780 */
+  --maxw: 780px; /* was 780 */
   color-scheme: dark;
 }
 
