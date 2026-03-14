@@ -33,7 +33,7 @@ a:hover { text-decoration: underline; }
 .wrap {
   max-width: var(--maxw);
   margin: 0 auto;
-  padding: 1rem 0.75rem 2rem; /* was 2rem 1rem 4rem */
+  padding: 1rem 0.75rem 3rem; /* was 2rem 1rem 2rem */
 }
 
 /* ===== Header / Logo ===== */
