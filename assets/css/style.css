@@ -102,11 +102,17 @@ hr { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
 
 /* ===== Project media ===== */
 .project-img {
-  width: 100%;        /* force to column width */
-  max-width: 100%;    /* no overflow */
-  height: auto;       /* keep aspect ratio */
+  width: 100%;
+  max-width: 100%;
+  height: auto;
   display: block;
   margin: 1rem auto;
+}
+
+.project-video {
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
 }
 
 /* ===== Buttons (kept for later) ===== */
