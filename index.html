@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -23,9 +23,9 @@
   <!-- Styles -->
   <link rel="stylesheet" href="/assets/css/style.css">
 
-  <!-- CSP: local assets only -->
+  <!-- CSP: local assets + YouTube embeds -->
   <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; base-uri 'self'; form-action 'self'">
+        content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; frame-src https://www.youtube-nocookie.com https://www.youtube.com; base-uri 'self'; form-action 'self'">
 </head>
 <body>
   <main class="wrap">
@@ -40,8 +40,17 @@
 	<section class="block">
       <h1>GREASE TRAP '99</h1>
 
-		<!-- Project image (CSP-safe: styled via CSS class) -->
-		<img src="/assets/img/grease-trap.png" class="project-img" alt="Grease Trap '99 screenshot"O
+		<!-- Project video: uses the same project-img class as the Highland Trip thumbnail -->
+		<iframe
+			class="project-img project-video"
+			width="1280"
+			height="720"
+			src="https://www.youtube-nocookie.com/embed/ahvvi8oY960?rel=0"
+			title="Grease Trap '99 Teaser"
+			loading="lazy"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+			allowfullscreen>
+		</iframe>
 
 		<p class="lede">
 		Story-driven mystery horror / comedic takeaway simulator. Deep-fry pizzas and live the Scottish dream. 
